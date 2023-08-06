@@ -7,8 +7,8 @@ This project offers production ready environment with all necessary supports for
 Clone the repo:
 
 ```bash
-git clone https://github.com/ItzSamdam/nodejs-prisma-mysql-boilerplate.git
-cd nodejs-prisma===-mysql-boilerplate
+git clone https://github.com/ItzSamdam/nodejs-prisma-orm-typescript.git
+cd nodejs-prisma-orm-typescript
 ```
 
 Install the dependencies:
