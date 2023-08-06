@@ -18,7 +18,29 @@ npm install
 ```
 Start coding ....
 
+Database Connection
+```javascript
+  datasource db {
+    //provider = "mysql", "postgres", "mongodb" ...
+    provider = "mysql";
+    //url = database url
+    url   = env("DATABASE_URL");
+  }
+`````
 
+Models
+```
+  prisma\
+    - schema.prisma
+```
+```javascript
+    //declare model Modelname
+    model User {
+      id       Int    @id @default(autoincrement())
+      email    String @unique
+      password String
+    }
+```
 ## Project Structure
 
 ```
