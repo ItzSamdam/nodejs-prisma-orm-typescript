@@ -16,36 +16,8 @@ Install the dependencies:
 ```bash
 npm install
 ```
+Start coding ....
 
-Set the environment variables:
-
-```bash
-cp .env.example .env
-
-# open .env and modify the environment variables (if needed)
-```
-
-## Commands
-
-Running locally:
-
-```bash
-yarn dev
-```
-
-Running in production:
-
-```bash
-npm run start
-```
-
-Testing:
-
-```bash
-# run all tests
-yarn test
-
-```
 
 ## Project Structure
 
