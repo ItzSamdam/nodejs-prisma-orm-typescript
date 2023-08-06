@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\laragon\\www\\nodejs-prisma-orm-typescript\\src\\logs\\debug\\.ab99f7e3a7697d7f6891efe51791ea9691777b22-audit.json",
+    "files": [
+        {
+            "date": 1691285275938,
+            "name": "C:\\laragon\\www\\nodejs-prisma-orm-typescript\\src\\logs\\debug\\2023-08-06.log",
+            "hash": "5e2d8153dea8e872496e738366da9cb96d59035ba4c902d38e43b99bf22d1392"
+        }
+    ],
+    "hashType": "sha256"
+}
