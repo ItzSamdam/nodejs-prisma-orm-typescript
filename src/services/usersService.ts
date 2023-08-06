@@ -6,7 +6,7 @@ import { HttpException } from '@/exceptions/httpException';
 import { User } from '@interfaces/users.interface';
 
 @Service()
-export class UserService {
+export class UsersService {
     public user = new PrismaClient().user;
 
     public async findAllUser(): Promise<User[]> {
