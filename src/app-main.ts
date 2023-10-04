@@ -31,10 +31,10 @@ export class App {
 
     public listen() {
         this.app.listen(this.port, () => {
-            logger.info(`=================================`);
-            logger.info(`======= ENV: ${this.env} =======`);
-            logger.info(`🚀 App listening on the port ${this.port}`);
-            logger.info(`=================================`);
+            logger.info(`===================================================================================================`);
+            logger.info(`==================================== SERVER ENV: ${this.env} ======================================`);
+            logger.info(`============================= 🚀 App listening on port ${this.port} ===============================`);
+            logger.info(`====================================================================================================`);
         });
     }
 
@@ -58,14 +58,13 @@ export class App {
             this.app.use('/', route.router);
         });
     }
-
     private initializeSwagger() {
         const options = {
             swaggerDefinition: {
                 info: {
-                    title: 'REST API',
+                    title: 'NODE JS(TypeScript) PRISMA ORM REST API',
                     version: '1.0.0',
-                    description: 'Example docs',
+                    description: 'Example Documentation',
                 },
             },
             apis: ['swagger.yaml'],
