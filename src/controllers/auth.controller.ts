@@ -3,7 +3,7 @@ import { Container } from 'typedi';
 import { RequestWithUser } from '@interfaces/auth.interface';
 import { User } from '@interfaces/users.interface';
 import { AuthService } from '@services/auth.service';
-import { OK } from 'http-status';
+import httpStatus from 'http-status';
 
 export class AuthController {
   public auth = Container.get(AuthService);
@@ -13,7 +13,7 @@ export class AuthController {
       const userData: User = req.body;
       const signUpUserData: User = await this.auth.signup(userData);
 
-      res.status(OK).json({ data: signUpUserData, message: 'signup' });
+      res.status(httpStatus.OK).json({ data: signUpUserData, message: 'signup' });
     } catch (error) {
       next(error);
     }
@@ -25,7 +25,7 @@ export class AuthController {
       const { cookie, findUser } = await this.auth.login(userData);
 
       res.setHeader('Set-Cookie', [cookie]);
-      res.status(OK).json({ data: findUser, message: 'login' });
+      res.status(httpStatus.OK).json({ data: findUser, message: 'login' });
     } catch (error) {
       next(error);
     }
@@ -37,7 +37,7 @@ export class AuthController {
       const logOutUserData: User = await this.auth.logout(userData);
 
       res.setHeader('Set-Cookie', ['Authorization=; Max-age=0']);
-      res.status(OK).json({ data: logOutUserData, message: 'logout' });
+      res.status(httpStatus.OK).json({ data: logOutUserData, message: 'logout' });
     } catch (error) {
       next(error);
     }
